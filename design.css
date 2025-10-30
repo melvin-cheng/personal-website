@@ -1,0 +1,155 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #717070;
+}
+
+/* Navigation */
+header {
+    background-color: #504f4f;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 1rem 2rem;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Main content */
+main {
+    margin-top: 60px;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+.hero {
+    background-color: #111;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Projects section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #111;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Utility: square profile / project image */
+.profile-img {
+    width: 300px;
+    height: 300px; /* fixed height to make a square */
+    object-fit: cover; /* crop while preserving aspect ratio */
+    border-radius: 8px; /* change to 0 for sharp corners or 50% for circle */
+    display: block;
+    flex: 0 0 300px;
+}
+
+/* Media section: image + content side-by-side */
+.media-section {
+    display: flex;
+    align-items: right;
+    gap: 1.5rem;
+}
+
+.media-content {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .media-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .media-content {
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+}
